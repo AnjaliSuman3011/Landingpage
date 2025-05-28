@@ -7,22 +7,27 @@ interface NotificationGridProps {
 }
 
 export const NotificationGrid: React.FC<NotificationGridProps> = ({ sections }) => {
-  const sendDataToGoogleSheet = (optionId: string, identifier: string) => {
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbxixa7Ii02_pmC3z1HFzdOs98rpAakA6X-3XTfcnQ48EB3zMH5t85gSUJxZqjI0sotrBA/exec';
-    const dateTime = new Date().toISOString(); // Correct ISO format expected by Apps Script
+  const sendDataToGoogleSheet = const sendDataToGoogleSheet = (optionId: string, identifier: string) => {
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxixa7Ii02_pmC3z1HFzdOs98rpAakA6X-3XTfcnQ48EB3zMH5t85gSUJxZqjI0sotrBA/exec';
+  const dateTime = new Date().toISOString();
 
-    const params = new URLSearchParams({
+  fetch(scriptUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
       eventType: "click",
       identifier,
       optionId,
       dateTime
-    });
+    })
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Click logged:", data))
+    .catch((error) => console.error('Error logging click:', error));
+};
 
-    fetch(`${scriptUrl}?${params.toString()}`)
-      .then((response) => response.json())
-      .then((data) => console.log("Click logged:", data))
-      .catch(error => console.error('Error logging click:', error));
-  };
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
