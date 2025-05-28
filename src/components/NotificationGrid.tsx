@@ -8,25 +8,20 @@ interface NotificationGridProps {
 
 export const NotificationGrid: React.FC<NotificationGridProps> = ({ sections }) => {
   const sendDataToGoogleSheet = (optionId: string, identifier: string) => {
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyLUov2x2tpWBb_nGcvxMAZiIYa-LnkUhge3yegntyZtOwx6T0MGphIfopcI3trzQ1ZeQ/exec';
-    const dateTime = new Date().toISOString();
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwfZSJAUyXjAuIFwHjrGe1HqmN7XqXKw3tSU1pZyqcDaQUG4Lz6KHkNvXb2hKzslp-meA/exec';
+  const dateTime = new Date().toISOString();
 
-    fetch(scriptUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        eventType: "click",
-        identifier,
-        optionId,
-        dateTime
-      })
-    })
-      .then((response) => response.json())
-      .then((data) => console.log("Click logged:", data))
-      .catch((error) => console.error('Error logging click:', error));
-  };
+  const params = new URLSearchParams({
+    identifier,
+    optionId,
+    dateTime
+  });
+
+  fetch(`${scriptUrl}?${params.toString()}`)
+    .then(res => res.json())
+    .then(data => console.log("Click logged:", data))
+    .catch(err => console.error("Click log failed:", err));
+};
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
