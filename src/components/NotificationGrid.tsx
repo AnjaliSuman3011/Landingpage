@@ -7,23 +7,22 @@ interface NotificationGridProps {
 }
 
 export const NotificationGrid: React.FC<NotificationGridProps> = ({ sections }) => {
-  const sendDataToGoogleSheet = (optionId: string, identifier: string) => {
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbzwYzHz9TBzps6k2wUnCiD9w6r3fmVJpDfJU-GPcVBJw-dzkzC75S98pBMD3Yqb3W3Oyw/exec'; // your actual URL
-  const dateTime = new Date().toISOString();
+  const sendDataToGoogleSheet = (identifier: string, optionId: string) => {
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbxlIR4aZdl-IWXdCMW-s6-_4g4_jOQ8rK-G2gcv5koV4LLLUPH2wDbBJQICAM7Lqw10lg/exec';
+    const dateTime = new Date().toISOString();
 
-  const params = new URLSearchParams({
-    eventType: "click",
-    identifier,
-    optionId,
-    dateTime
-  });
+    const params = new URLSearchParams({
+      eventType: "click",
+      identifier,
+      optionId,
+      dateTime
+    });
 
-  fetch(`${scriptUrl}?${params.toString()}`)
-    .then(res => res.json())
-    .then(data => console.log("Click logged:", data))
-    .catch(err => console.error("Click log failed:", err));
-};
-
+    fetch(`${scriptUrl}?${params.toString()}`)
+      .then(res => res.json())
+      .then(data => console.log("Click logged:", data))
+      .catch(err => console.error("Click log failed:", err));
+  };
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
