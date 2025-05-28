@@ -3,15 +3,13 @@ import { NotificationCard as NotificationCardType } from '../types';
 
 interface NotificationCardProps {
   card: NotificationCardType;
-  onCardClick: (id: string, identifier: string) => void;
+  onCardClick: (identifier: string, optionId: string) => void;
 }
 
 export const NotificationCard: React.FC<NotificationCardProps> = ({ card, onCardClick }) => {
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-
-    // Send the click event
-    onCardClick(card.id, card.identifier);
+    onCardClick(card.identifier, card.id); // ✅ Corrected order
   };
 
   return (
