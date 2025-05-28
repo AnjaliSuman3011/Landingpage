@@ -9,22 +9,20 @@ interface NotificationGridProps {
 export const NotificationGrid: React.FC<NotificationGridProps> = ({ sections }) => {
   const sendDataToGoogleSheet = (optionId: string, identifier: string) => {
     const scriptUrl = 'https://script.google.com/macros/s/AKfycbxixa7Ii02_pmC3z1HFzdOs98rpAakA6X-3XTfcnQ48EB3zMH5t85gSUJxZqjI0sotrBA/exec';
-    const now = new Date();
-    const dateTime = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} / ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+    const dateTime = new Date().toISOString(); // Correct ISO format expected by Apps Script
 
     const params = new URLSearchParams({
-        eventType: "click",
-        identifier,
-        optionId,
-        dateTime
+      eventType: "click",
+      identifier,
+      optionId,
+      dateTime
     });
 
     fetch(`${scriptUrl}?${params.toString()}`)
-        .then((response) => response.json())
-        .then((data) => console.log("Response:", data))
-        .catch(error => console.error('Error:', error));
-};
-
+      .then((response) => response.json())
+      .then((data) => console.log("Click logged:", data))
+      .catch(error => console.error('Error logging click:', error));
+  };
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
