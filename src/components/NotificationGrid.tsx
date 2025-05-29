@@ -8,7 +8,7 @@ interface NotificationGridProps {
 
 export const NotificationGrid: React.FC<NotificationGridProps> = ({ sections }) => {
   const sendDataToGoogleSheet = (identifier: string, optionId: string) => {
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbxlIR4aZdl-IWXdCMW-s6-_4g4_jOQ8rK-G2gcv5koV4LLLUPH2wDbBJQICAM7Lqw10lg/exec';
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbwUNDuJLsKKuyHEF_026jOc9b8gj01qgiyQwCf2CyF1grCGS-yymNf7ZNuAhuiuGcvd/exec';
     const dateTime = new Date().toISOString();
 
     const params = new URLSearchParams({
