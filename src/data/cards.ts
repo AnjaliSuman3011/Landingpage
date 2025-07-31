@@ -19,7 +19,7 @@ export const gridSections: GridSection[] = [
         title: 'Quarterly Placement Report',
         description: 'View the Total Opportunities & CTC achieved by Crio.Do learners.',
         imageUrl: 'https://directus.crio.do/assets/a3f12389-511f-4af7-a978-e6d8dcfdec22.webp',
-        linkUrl: 'https://bit.ly/3EledF2',
+        linkUrl: 'https://drive.google.com/file/d/1RVUDhaRJxaCQbnlBdOnMSaUD2oYb3816/view?usp=sharing',
         buttonText: 'Click Here',
         identifier: 'Placement Stats Dashboard',
       },
