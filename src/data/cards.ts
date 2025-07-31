@@ -29,7 +29,7 @@ export const gridSections: GridSection[] = [
         description: 'With new stats, top alumni reviews and our top hiring partners.',
         imageUrl:
         'https://directus.crio.do/assets/583ef0db-0103-4756-af54-8a4bf48b254d.webp',
-        linkUrl: 'https://drive.google.com/file/d/1FY35sHZ5YIFJ41OHyu3mOYGHV4ZiTHmT/view',
+        linkUrl: 'https://drive.google.com/file/d/1RVUDhaRJxaCQbnlBdOnMSaUD2oYb3816/view?usp=sharing',
         buttonText: 'Click Here',
         identifier: 'Placement Stats Brochure',
       },
