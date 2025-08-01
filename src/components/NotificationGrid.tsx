@@ -24,25 +24,21 @@ export const NotificationGrid: React.FC<NotificationGridProps> = ({ sections }) 
       .catch(err => console.error("Click log failed:", err));
   };
 
+  // Flatten all cards across sections into a single array
+  const allCards = sections.flatMap(section => section.cards);
+
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {sections.map((section, sectionIndex) => {
-        const cards = section.cards;
-        return (
-          <div
-            key={sectionIndex}
-            className="grid gap-8 mb-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 max-w-[1800px] mx-auto"
-          >
-            {cards.map((card) => (
-              <NotificationCard
-                key={card.id}
-                card={card}
-                onCardClick={sendDataToGoogleSheet}
-              />
-            ))}
-          </div>
-        );
-      })}
+      <div className="grid gap-8 mb-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 max-w-[1800px] mx-auto">
+        {allCards.slice(0, 8).map((card) => (
+          <NotificationCard
+            key={card.id}
+            card={card}
+            onCardClick={sendDataToGoogleSheet}
+          />
+        ))}
+      </div>
     </div>
   );
 };
+
