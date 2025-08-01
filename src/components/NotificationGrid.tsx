@@ -31,7 +31,7 @@ export const NotificationGrid: React.FC<NotificationGridProps> = ({ sections }) 
         return (
           <div
             key={sectionIndex}
-            className="grid gap-8 mb-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1800px] mx-auto"
+            className="grid gap-8 mb-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 max-w-[1800px] mx-auto"
           >
             {cards.map((card) => (
               <NotificationCard
