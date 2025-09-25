@@ -53,7 +53,7 @@ export const gridSections: GridSection[] = [
         description: 'Check out this featured project for more insights.',
         imageUrl:
         'https://directus.crio.do/assets/dd38ee29-46ed-41ae-acdb-75ab39013526.webp',
-        linkUrl: 'https://www.crio.do/featured-project',
+        linkUrl: 'https://www.crio.do/projects/',
         buttonText: 'Explore Now',
         identifier: 'Featured Project',
       },
