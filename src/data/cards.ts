@@ -16,15 +16,26 @@ export const gridSections: GridSection[] = [
       },
       
       {
-        id: 'placement-stats-button',
-        title: 'Placement Stat Brochure',
-        description: 'With new stats, top alumni reviews and our top hiring partners.',
-        imageUrl:
-        'https://directus.crio.do/assets/583ef0db-0103-4756-af54-8a4bf48b254d.webp',
-        linkUrl: 'https://drive.google.com/file/d/1RVUDhaRJxaCQbnlBdOnMSaUD2oYb3816/view?usp=sharing',
-        buttonText: 'Click Here',
-        identifier: 'Placement Stats Brochure',
-      },
+  id: 'placement-stats-button',
+  title: 'Placement Stat Brochure',
+  description: 'With new stats, top alumni reviews and our top hiring partners.',
+  imageUrl:
+    'https://directus.crio.do/assets/583ef0db-0103-4756-af54-8a4bf48b254d.webp',
+  buttonText: 'Click Here',
+  identifier: 'Placement Stats Brochure',
+
+  links: [
+    {
+      label: 'Overall Placement Report',
+      url: 'https://drive.google.com/file/d/1vRcQjTHPHpYoZnfjF8fkhg6PIQJqVyHd/view?usp=sharing',
+    },
+    {
+      label: 'Placement Stats Brochure',
+      url: 'https://drive.google.com/file/d/1RVUDhaRJxaCQbnlBdOnMSaUD2oYb3816/view?usp=sharing',
+    },
+  ],
+}
+
       {
         id: 'google-reviews-button',
         title: 'Google Reviews',
