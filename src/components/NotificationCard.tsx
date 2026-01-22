@@ -55,18 +55,20 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
 
               {open && (
                 <div
-                  style={{
-                    position: 'absolute',
-                    top: '110%',
-                    left: '0',
-                    background: '#2b2b2b',
-                    borderRadius: '14px',
-                    padding: '14px 18px',
-                    minWidth: '260px',
-                    zIndex: 50,
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
-                  }}
-                >
+                style={{
+                  position: 'absolute',
+                    top: '50%',
+                left: '110%',
+                 transform: 'translateY(-50%)',
+                background: '#2b2b2b',
+                borderRadius: '14px',
+                padding: '14px 18px',
+                 minWidth: '260px',
+                zIndex: 50,
+               boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
+                }}
+                 >
+
                   {(card as any).links.map(
                     (
                       link: { label: string; url: string },
