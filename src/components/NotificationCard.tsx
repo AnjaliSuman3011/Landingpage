@@ -58,8 +58,10 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
                 style={{
                   position: 'absolute',
                     top: '50%',
-                left: '110%',
-                 transform: 'translateY(-50%)',
+                right: '-12px',
+                 top: '100%',
+                marginTop: '12px',
+
                 background: '#2b2b2b',
                 borderRadius: '14px',
                 padding: '14px 18px',
