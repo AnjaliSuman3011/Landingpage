@@ -18,8 +18,7 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
   };
 
   return (
-    <div className="relative flex flex-col items-stretch rounded-xl shadow-lg bg-gradient-to-r from-[#004246] to-[#02BF91] text-white overflow-hidden w-full transition-transform hover:-translate-y-1 hover:shadow-xl group">
-      <div className="w-full h-[200px] flex-shrink-0">
+    <div className="relative flex flex-col items-stretch rounded-xl shadow-lg bg-gradient-to-r from-[#004246] to-[#02BF91] text-white overflow-visible w-full transition-transform hover:-translate-y-1 hover:shadow-xl group">
         <img
           src={card.imageUrl}
           alt={card.title}
