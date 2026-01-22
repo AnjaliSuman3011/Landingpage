@@ -54,22 +54,22 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
               </button>
 
               {open && (
-                <div
-                style={{
-                  position: 'absolute',
-                    top: '50%',
-                right: '-12px',
-                 top: '100%',
-                marginTop: '12px',
+  <div
+    style={{
+      position: 'absolute',
+      top: '50%',
+      left: 'calc(100% + 12px)',
+      transform: 'translateY(-50%)',
+      background: '#2b2b2b',
+      borderRadius: '14px',
+      padding: '14px 18px',
+      minWidth: '260px',
+      zIndex: 50,
+      boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
+      whiteSpace: 'nowrap',
+    }}
+  >
 
-                background: '#2b2b2b',
-                borderRadius: '14px',
-                padding: '14px 18px',
-                 minWidth: '260px',
-                zIndex: 50,
-               boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
-                }}
-                 >
 
                   {(card as any).links.map(
                     (
