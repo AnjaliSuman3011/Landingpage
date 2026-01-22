@@ -14,11 +14,14 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
 
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    onCardClick(card.identifier, card.id); // keep analytics intact
+    onCardClick(card.identifier, card.id);
   };
 
   return (
     <div className="relative flex flex-col items-stretch rounded-xl shadow-lg bg-gradient-to-r from-[#004246] to-[#02BF91] text-white overflow-visible w-full transition-transform hover:-translate-y-1 hover:shadow-xl group">
+      
+      {/* Image section */}
+      <div className="w-full h-[200px] flex-shrink-0">
         <img
           src={card.imageUrl}
           alt={card.title}
@@ -26,6 +29,7 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
         />
       </div>
 
+      {/* Content section */}
       <div className="flex flex-col justify-between p-6 w-full min-h-[200px]">
         <div className="flex-grow">
           <h2 className="text-2xl font-semibold text-white mb-3">
@@ -109,3 +113,4 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
     </div>
   );
 };
+
