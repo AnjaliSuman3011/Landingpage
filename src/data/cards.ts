@@ -31,7 +31,7 @@ export const gridSections: GridSection[] = [
             url: 'https://drive.google.com/file/d/1vRcQjTHPHpYoZnfjF8fkhg6PIQJqVyHd/view?usp=sharing',
           },
           {
-            label: 'Placement Stats Brochure',
+            label: 'Quarterly Placement Report',
             url: 'https://drive.google.com/file/d/1RVUDhaRJxaCQbnlBdOnMSaUD2oYb3816/view?usp=sharing',
           },
         ],
