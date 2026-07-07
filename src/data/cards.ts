@@ -112,6 +112,16 @@ export const gridSections: GridSection[] = [
         buttonText: 'Click Here',
         identifier: 'Video Testimonials',
       },
+       {
+        id: 'resume-button',
+        title: 'Resume',
+        description: 'Access resume templates and samples in one place.',
+        imageUrl: PlaceholderImage,
+        linkUrl:
+          'https://drive.google.com/drive/u/0/folders/1WhhEEcMQBZoGULnBoPSm-h5y_lw0XSfq',
+        buttonText: 'Click Here',
+        identifier: 'Resume',
+      },
     ],
   },
 ];
