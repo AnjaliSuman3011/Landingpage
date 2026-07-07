@@ -116,7 +116,7 @@ export const gridSections: GridSection[] = [
         id: 'resume-button',
         title: 'Resume',
         description: 'Access resume templates and samples in one place.',
-        imageUrl: PlaceholderImage,
+        imageUrl: 'https://directus.crio.do/assets/9be7d44e-4963-4530-9f3d-86f4b52d7ac3.webp',
         linkUrl:
           'https://drive.google.com/drive/u/0/folders/1WhhEEcMQBZoGULnBoPSm-h5y_lw0XSfq',
         buttonText: 'Click Here',
