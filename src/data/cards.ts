@@ -85,7 +85,7 @@ export const gridSections: GridSection[] = [
         imageUrl:
           'https://directus.crio.do/assets/face402c-4029-4130-9c7b-d470a1006348.webp',
         linkUrl:
-          'https://sites.google.com/criodo.com/sales-resources/sales-assets-creatives',
+          'https://sites.google.com/criodo.com/sales-resources/sales-assets',
         buttonText: 'Checkout',
         identifier: 'Sales Assets',
       },
